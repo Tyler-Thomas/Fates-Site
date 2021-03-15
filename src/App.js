@@ -1,11 +1,19 @@
 
 import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Chapters from './Chapters.jsx';
+import Home from './Home.jsx';
 
 function App() {
   return (
+    <Router>
     <div className="App">
-      Nothing to see here(yet).
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/chapters" component={Chapters}/>
+      </Switch>
     </div>
+    </Router>
   );
 }
 
